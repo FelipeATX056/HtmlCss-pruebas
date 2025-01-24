@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+body, h1, h2, h3, p, a, input, button {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: #CFCFCF;
+}
+
+
+.cuadrado {
+  background: linear-gradient(#ECECEC, #D0D0D0);
+  width: 40vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+
+.circlebottom {
+  background: #33B0D7;
+  border-radius: 50%;
+  width: 40rem;
+  height: 35rem;
+  position: absolute;
+  bottom: -7rem;
+  left: -14.5rem;
+  z-index: 1;
+  box-shadow:
+    -30px -15px 30px 5px rgba(255, 255, 255, 0.527),
+    30px 15px 36px 12px#6b6b6b58,
+    inset 15px 15px 25px 10px #0000003a,
+    inset -15px -15px 45px 15px #ffffff68;
+}
+
+.circletop {
+  background: #33B0D7;
+  border-radius: 50%;
+  width: 31rem;
+  height: 31rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(200px, -50px);
+  box-shadow:
+    -30px -15px 30px 5px rgba(255, 255, 255, 0.527),
+    30px 15px 30px 15px#0000004c,
+    inset 15px 15px 25px 10px #0000003a,
+    inset -15px -15px 45px 15px #ffffff68;
+
+}
+
+
+.header {
+  text-align: left; 
+  padding-left: 2rem; 
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  color: #33B0D7;
+  margin-bottom: 1rem;
+}
+
+.header h3 {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  margin-top: 30px;
+}
+
+.header h2 {
+  font-size: 3rem;
+  color: #3d3d3d;
+  margin-bottom: 1rem;
+  
+}
+.header h2 a{
+  font-size: 2rem;
+  color: #33B0D7;
+  margin-bottom: 1rem; text-decoration: none;
+  
+}
+
+.header p {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.header p a {
+  color: #33B0D7;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+/* Formulario */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 90%; 
+  padding-left: 2rem; 
+  z-index: 2;
+  margin-bottom:6rem ;
+}
+
+.form input {
+  height: 82px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.form input::placeholder {
+  color: #aaa;
+}
+
+.form button {
+  height: 82px;
+  margin: 0 auto; 
+  display: block; 
+  width: 50%; 
+  padding: 10px;
+  background-color: #33B0D7;
+  color: white;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form button:hover {
+  background: #007bb3;
+}
+
+
+/* Contenedor de la enfermera */
+.imagen-container {
+  position: absolute;
+  right: 35%; 
+  bottom: 15%; 
+  z-index: 2; 
+}
+
+.nurse-image {
+  width: 20rem; 
+  height: auto; 
+}
+
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.input-container i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #3d3d3d;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px 40px 10px 15px; /* Espacio para el ícono */
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  color: #333;
+}
+
+
+@media (max-width: 768px) { /*esta es la parte responsive*/
+  .cuadrado {
+    width: 90vw;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .header {
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .form {
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .form button {
+    height: 60px;
+    width: 70%;
+    font-size: 1rem;
+  }
+
+  .circlebottom {
+    width: 30rem;
+    height: 25rem;
+    bottom: -5rem;
+    left: -12rem;
+  }
+
+  .circletop {
+    width: 25rem;
+    height: 25rem;
+    transform: translate(100px, -30px);
+  }
+
+  .imagen-container {
+    right: 10%;
+    bottom: 5%;
+  }
+
+  .nurse-image {
+    width: 12rem;
+    display: none;
+  }
+
+  .form input {
+    height: 50px; /* Más pequeño en altura */
+    font-size: 0.8rem; /* Fuente más pequeña */
+    padding: 0.3rem 0.8rem; /* Menos relleno */
+  }
+}
